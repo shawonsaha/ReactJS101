@@ -2,29 +2,46 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./index.css";
+//creating book object
+const firstBook = {
+  image:
+    "https://images-na.ssl-images-amazon.com/images/I/713mzPe9SwS._AC_UL200_SR200,200_.jpg",
+  title: "Atomic Habits: Easy & Proven Way",
+  author: "James Clear"
+};
 
-const title = "Atomic Habits: Easy & Proven Way";
-const author = "James Clear";
-const image =
-  "https://images-na.ssl-images-amazon.com/images/I/713mzPe9SwS._AC_UL200_SR200,200_.jpg";
+const secondBook = {
+  image:
+    "https://images-na.ssl-images-amazon.com/images/I/91g%2BaK0nCnL._AC_UL200_SR200,200_.jpg",
+  title: "The Four Winds: A Novel",
+  author: "Kristin Hannah"
+};
+
 //This is main fucntion generally called App() Where all other microcomponent will placed
 function BookList() {
   return (
     <section className="booklist">
-      <Book haha="kire" />
-      <Book job="devoloper" />
-      <Book />
+      <Book
+        image={firstBook.image}
+        title={firstBook.title}
+        author={firstBook.author}
+      />
+      <Book
+        image={secondBook.image}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
     </section>
   );
 }
 
 const Book = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <article className="book">
-      <img src={image} alt={title} />
-      <h4>{title}</h4>
-      <h5>{author}</h5>
+      <img src={props.image} alt={props.title} />
+      <h4>{props.title}</h4>
+      <h5>{props.author}</h5>
     </article>
   );
 };
