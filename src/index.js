@@ -3,25 +3,30 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 //creating book object
-const firstBook = {
-  image:
-    "https://images-na.ssl-images-amazon.com/images/I/713mzPe9SwS._AC_UL200_SR200,200_.jpg",
-  title: "Atomic Habits: Easy & Proven Way",
-  author: "James Clear"
-};
+// const firstBook = {
+//   image:
+//     "https://images-na.ssl-images-amazon.com/images/I/713mzPe9SwS._AC_UL200_SR200,200_.jpg",
+//   title: "Atomic Habits: Easy & Proven Way",
+//   author: "James Clear"
+// };
 
-const secondBook = {
-  image:
-    "https://images-na.ssl-images-amazon.com/images/I/91g%2BaK0nCnL._AC_UL200_SR200,200_.jpg",
-  title: "The Four Winds: A Novel",
-  author: "Kristin Hannah"
-};
+// const secondBook = {
+//   image:
+//     "https://images-na.ssl-images-amazon.com/images/I/91g%2BaK0nCnL._AC_UL200_SR200,200_.jpg",
+//   title: "The Four Winds: A Novel",
+//   author: "Kristin Hannah"
+// };
 
 //This is main fucntion generally called App() Where all other microcomponent will placed
+const names = ["suvra", "saurav", "shawon"];
+const newNames = names.map((name) => {
+  return <h1>{name}</h1>;
+});
 function BookList() {
   return (
     <section className="booklist">
-      <Book
+      {newNames}
+      {/* <Book
         image={firstBook.image}
         title={firstBook.title}
         author={firstBook.author}>
@@ -29,7 +34,7 @@ function BookList() {
           sodales neque sodales ut etiam sit amet nisl purus in mollis nunc sed
           id semper risus in hendrerit gravida rutrum
         </p>
-      </Book>
+      </Book> */}
     </section>
   );
 }
